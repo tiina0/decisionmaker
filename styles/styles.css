@@ -1,7 +1,7 @@
 body {
     background: #121212;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -10,15 +10,36 @@ h3 {
     text-align: center;
 }
 
+h2 {
+    margin-top: 0;
+    font-family: 'Square Peg', cursive;
+    font-size: 3rem;
+}
+
+.container {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    /* box-shadow: 2px 4px 4px rgb(0, 0, 0); */
+    border-radius: 8px;
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+    color: #c502c5;
+    margin-bottom: 0.75rem;
+    font-size: 4rem;
+    text-shadow: 2px 4px 4px rgb(0, 0, 0);
+}
+
 form {
     max-width: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-center;
-    background-color: rgba(255, 255, 255, 0.07);
-    box-shadow: 1px 2px 2px black;
-    border-radius: 8px;
+
 }
 
 form {
@@ -28,6 +49,7 @@ form {
 form h3 {
     text-align: left;
     margin: 0;
+    font-weight: normal;
 }
 
 label,
@@ -37,15 +59,26 @@ input {
 
 input {
     padding: 0.5rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     border-radius: 8px;
     border: none;
 }
 
+input:focus {
+    outline: none;
+}
+
 .buttons {
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+button {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 2px 2px 2px black;
 }
 
 .thing-to-be-decided {
@@ -61,27 +94,44 @@ input {
     margin-bottom: 0;
 }
 
+.options-list input {
+    width: 80%;
+}
+
 .decision-container {
     display: none;
 }
 
 #anotherDecision {
-    padding: 0.25rem;
-    display: none;
     width: max-content;
-    background-color: white;
+    color: white;
+    padding: 0.5rem;
     border-radius: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-size: 200% auto;
+    display: block;
+    transition: 0.5s;
+    background-color: #13a572;
+}
+
+#anotherDecision:hover {
+    background-color: #0e8058;
 }
 
 #error {
     background-color: crimson;
+    width: max-content;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;
 }
 
 .remove {
     background-color: red;
     color: white;
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .remove:hover {
@@ -89,13 +139,31 @@ input {
 }
 
 #addOption {
+    position: relative;
+    top: 4px;
     font-size: large;
-    background-color: white;
+    background-color: rgb(15, 227, 227);
     border-radius: 15px;
+    height: 23px;
+    transition: 0.5s;
+}
+
+#addOption:hover {
+    background-color: rgb(11, 148, 148);
 }
 
 #submitBtn {
-    background-color: white;
+    color: white;
+    padding: 0.5rem;
+    background-color: rgb(255, 0, 238);
     border-radius: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-size: 200% auto;
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+#submitBtn:hover {
+    background-color: rgb(189, 3, 176);
 }

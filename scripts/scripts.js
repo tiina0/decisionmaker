@@ -60,6 +60,14 @@ getFormElements().removeBtns.forEach(btn => btn.addEventListener("click", () => 
     removeFunc(btn);
 }))
 
+getFormElements().inputFields.forEach(field => field.addEventListener("click", () => {
+    getFormElements().error.style.display = "none";
+}))
+
+getFormElements().error.addEventListener("click", () => {
+    getFormElements().error.style.display = "none";
+})
+
 getFormElements().form.addEventListener("submit", (e) => {
     e.preventDefault();
     getFormElements().error.style.display = "none"

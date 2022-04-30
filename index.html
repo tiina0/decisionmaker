@@ -6,44 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,300;0,400;1,300&family=Square+Peg&display=swap"
+        rel="stylesheet">
     <title>Decision maker</title>
 </head>
 
 <body>
-    <div class="content"></div>
-    <h1>Decision maker</h1>
-    <h2>For when it's too hard to make decisions yourself</h2>
-    <h3>What shall we decide for you today?</h3>
-    <form id="theForm">
-        <h3>Thing to be decided</h3>
-        <p class="thing-to-be-decided"></p>
-        <input type="text" class="question-input" placeholder="Type your question here" required>
-        <div class="options-list">
-            <label for="options">List your options</label>
-            <div>
-                <input type="text" class="options" placeholder="Option #1" required>
-                <button type="button" class="remove">X</button>
+    <div class="container">
+        <h1>Decision maker</h1>
+        <h2>For when it's too hard to make decisions yourself</h2>
+        <!-- <h3>What shall we decide for you today?</h3> -->
+        <form id="theForm">
+            <h3>What shall we decide for you today?</h3>
+            <p class="thing-to-be-decided"></p>
+            <input type="text" class="question-input" placeholder="Type your question here" required>
+            <div class="options-list">
+                <label for="options">List your options</label>
+                <div>
+                    <input type="text" class="options" placeholder="Option #1" required>
+                    <button type="button" class="remove">X</button>
+                </div>
+                <div>
+                    <input type="text" class="options" placeholder="Option #2" required>
+                    <button type="button" class="remove">X</button>
+                </div>
+                <div>
+                    <input type="text" class="options" placeholder="Option #3" required>
+                    <button type="button" class="remove">X</button>
+                </div>
             </div>
-            <div>
-                <input type="text" class="options" placeholder="Option #2" required>
-                <button type="button" class="remove">X</button>
+            <div id="error" style="display:none">You need to have at least two options</div>
+            <div class="decision-container">
+                <h3>Decision</h3>
+                <p class="decision-result"></p>
             </div>
-            <div>
-                <input type="text" class="options" placeholder="Option #3" required>
-                <button type="button" class="remove">X</button>
+            <div class="buttons">
+                <button type="button" id="addOption">+</button>
+                <button type="submit" id="submitBtn">Show decision</button>
             </div>
-        </div>
-        <div id="error" style="display:none">You need to have at least two options</div>
-        <div class="decision-container">
-            <h3>Decision</h3>
-            <p class="decision-result"></p>
-        </div>
-        <div class="buttons">
-            <button type="button" id="addOption">+</button>
-            <button type="submit" id="submitBtn">Submit</button>
-        </div>
-        <button type="button" id="anotherDecision">Another decision</button>
-    </form>
+            <button type="button" id="anotherDecision">Another decision</button>
+        </form>
+    </div>
     <script src="scripts/scripts.js"></script>
 </body>
 
