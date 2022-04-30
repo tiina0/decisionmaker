@@ -103,13 +103,13 @@ button {
 }
 
 #anotherDecision {
+    display: none;
     width: max-content;
     color: white;
     padding: 0.5rem;
     border-radius: 15px;
     text-align: center;
     background-size: 200% auto;
-    display: block;
     transition: 0.5s;
     background-color: #13a572;
 }
