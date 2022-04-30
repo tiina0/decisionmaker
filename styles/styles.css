@@ -95,7 +95,7 @@ button {
 }
 
 .options-list input {
-    width: 80%;
+    max-width: 80%;
 }
 
 .decision-container {
