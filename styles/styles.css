@@ -1,7 +1,15 @@
+html,
 body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
     background: #121212;
     color: white;
     font-family: 'Roboto', sans-serif;
+    position: relative
 }
 
 h1,
@@ -13,6 +21,7 @@ h3 {
 h1 {
     font-family: 'Bangers', cursive;
     color: #c502c5;
+    margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     font-size: 4rem;
     text-shadow: 2px 4px 4px rgb(0, 0, 0);
@@ -82,6 +91,7 @@ button {
 }
 
 .options-list {
+    font-size: 0;
     display: flex;
     flex-direction: column;
 }
@@ -186,6 +196,12 @@ button {
     background-color: #0e8058;
 }
 
+@media (max-width: 1280px) {
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+
 @media (max-width: 450px) {
     .container {
         padding: 0.5rem;
@@ -200,5 +216,15 @@ button {
         font-size: 2.5rem;
         margin-bottom: 1rem;
         line-height: 1;
+    }
+}
+
+@media (max-width: 300px) {
+    .options-list input {
+        max-width: 75%;
+    }
+
+    .buttons {
+        margin-top: 0.5rem;
     }
 }
