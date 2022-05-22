@@ -1,15 +1,9 @@
-html,
-body {
-    overflow-x: hidden;
-}
-
 body {
     margin: 0;
     padding: 0;
     background: #121212;
     color: white;
     font-family: 'Roboto', sans-serif;
-    position: relative
 }
 
 h1,
